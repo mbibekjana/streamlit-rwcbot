@@ -12,7 +12,7 @@ def invoke_agent(agent_id, agent_alias_id, session_id, prompt):
         AWS_SECRET_ACCESS_KEY = st.secrets["AWS_SECRET_ACCESS_KEY"]
         AWS_REGION = st.secrets.get("AWS_REGION", "us-east-1")
         REGION = AWS_REGION
-        client = boto3.session.Session().client(service_name="bedrock-agent-runtime", REGION = AWS_REGION,aws_access_key_id=AWS_ACCESS_KEY_ID,
+        client = boto3.session.Session().client(service_name="bedrock-agent-runtime", region_name = AWS_REGION,aws_access_key_id=AWS_ACCESS_KEY_ID,
     aws_secret_access_key=AWS_SECRET_ACCESS_KEY)
         # See https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/bedrock-agent-runtime/client/invoke_agent.html
         response = client.invoke_agent(
