@@ -23,8 +23,8 @@ load_dotenv()
 # logger = logging.getLogger(__name__)
 
 # Get config from environment variables
-agent_id = "QIUEJU3QXW"
-agent_alias_id = "XACNWY3RVB"  # TSTALIASID is the default test alias ID
+agent_id = st.secrets["BEDROCK_AGENT_ID"]
+agent_alias_id = st.secrets["BEDROCK_AGENT_ALIAS_ID"]  # TSTALIASID is the default test alias ID
 ui_title = os.environ.get("BEDROCK_AGENT_TEST_UI_TITLE", "Agents for Amazon Bedrock Test UI")
 ui_icon = os.environ.get("BEDROCK_AGENT_TEST_UI_ICON")
 
