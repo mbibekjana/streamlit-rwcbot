@@ -33,8 +33,8 @@ def invoke_agent(agent_id, agent_alias_id, session_id, prompt):
             if "chunk" in event:
                 chunk = event["chunk"]
                 output_text += chunk["bytes"].decode()
-                if "attribution" in chunk:
-                    citations += chunk["attribution"]["citations"]
+                # if "attribution" in chunk:
+                #     citations += chunk["attribution"]["citations"]
 
             # Extract trace information from all events
             # if "trace" in event:
